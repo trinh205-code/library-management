@@ -1,0 +1,123 @@
+.browse-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.browse-search {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.browse-search .search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.browse-search input {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-white);
+  font-size: 0.875rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.browse-search input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-bg);
+}
+
+.browse-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.browse-filters .form-select {
+  padding: 9px 30px 9px 12px;
+  font-size: 0.85rem;
+}
+
+.view-toggle {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.view-toggle .btn-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 0;
+  color: var(--text-secondary);
+  background: var(--bg-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.view-toggle .btn-icon.active {
+  background: var(--primary);
+  color: white;
+}
+
+.view-toggle .btn-icon:first-child {
+  border-right: 1px solid var(--border-color);
+}
+
+.browse-count {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content-list .book-card {
+  flex-direction: row;
+  max-height: 140px;
+}
+
+.content-list .book-card-image {
+  width: 100px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.content-list .book-card-body {
+  padding: 12px 16px;
+}
+
+@media (max-width: 768px) {
+  .browse-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .browse-search {
+    max-width: 100%;
+  }
+
+  .browse-filters {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,230 @@
+.subscriptions-page {
+  animation: fadeIn 0.4s ease;
+}
+
+.subs-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subs-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.subs-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.subs-countdown {
+  max-width: 1000px;
+  margin: 0 auto 24px auto;
+  background: linear-gradient(135deg, var(--primary-bg), #fff);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subs-countdown.expired {
+  background: rgba(231, 76, 60, 0.06);
+  border-left-color: var(--accent-red);
+}
+
+.subs-countdown-label {
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+}
+
+.subs-countdown-value {
+  color: var(--text-primary);
+  font-size: 1.05rem;
+}
+
+.subs-countdown-date {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  align-items: center; /* helps "featured" stand out if it's taller */
+}
+
+.pricing-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--primary);
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(108, 92, 231, 0.15);
+  padding: 50px 30px;
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.featured-badge-custom {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+}
+
+.plan-name-custom {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.plan-price-box {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.plan-price-custom {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.plan-price-period {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.plan-features-list {
+  list-style: none;
+  margin: 0 0 30px 0;
+  padding: 0;
+  flex: 1; /* push button to bottom */
+}
+
+.plan-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.check-icon-custom {
+  color: var(--accent-green);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.subs-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-current {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  cursor: default;
+}
+
+.btn-upgrade {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-upgrade:hover {
+  background: var(--primary-bg);
+}
+
+.featured .btn-upgrade {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+.featured .btn-upgrade:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+
+.subs-footer {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.subs-footer-icon {
+  font-size: 3rem;
+  color: var(--accent-orange);
+  margin-bottom: 16px;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+.subs-footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.subs-footer p {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .pricing-card.featured {
+    transform: scale(1);
+    padding: 40px 30px;
+  }
+  .pricing-card.featured:hover {
+    transform: translateY(-8px);
+  }
+}
