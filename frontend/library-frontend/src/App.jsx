@@ -126,14 +126,11 @@ const router = createBrowserRouter([
   },
 ]);
 
-import Chatbot from './components/Chatbot';
-
 function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
         <RouterProvider router={router} />
-        <Chatbot />
         <Toaster
           position="top-right"
           toastOptions={{
